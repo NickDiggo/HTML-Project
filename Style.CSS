@@ -177,3 +177,130 @@ section {
 .links-over-mij i:hover {
   transform: scale(1.1);
 }
+
+/* CV + scrollbar
+***********************************************************************************************/
+
+/*.sectie-cv{
+
+
+
+
+}*/
+
+.titel-cv {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.info-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.grid-cv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.sectie-grid-cv {
+  border: 2px solid white;
+  border-radius: 3rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: left;
+
+  transition: 0.2s ease-in-out;
+  color: white;
+}
+
+.sectie-grid-cv:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: black;
+}
+
+.sectie-grid-cv i {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/*scrollbar
+***************************************************************************************************************/
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, white, black);
+}
+
+/* projecten
+******************************************************************************************************************/
+
+.grid-projecten {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  color: white;
+}
+
+.grid-sectie-projecten {
+  border: 2px solid white;
+  border-radius: 3rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: left;
+  transition: 0.2s ease-in-out;
+  color: white;
+
+  /*padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  border: 2px solid white;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;*/
+}
+
+.grid-sectie-projecten:hover {
+  background-color: white;
+  color: black;
+}
+
+.grid-sectie-projecten img {
+  width: 20vw;
+  border-radius: 1rem;
+}
+
+.grid-sectie-projecten h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.titel-projecten {
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  font-size: 3rem;
+}
