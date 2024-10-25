@@ -1,0 +1,201 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+} */
+
+/*navbar
+  **********************************************************************************************/
+body {
+  background-color: black;
+}
+
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  background-color: silver;
+  backdrop-filter: blur(10px);
+  color: silver;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  z-index: 999;
+}
+
+.naam {
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.naam:hover {
+  transform: scale(1.1);
+}
+
+.links-header {
+  display: flex;
+  gap: 2rem;
+}
+
+li a {
+  position: relative;
+  color: black;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+li a::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  height: 5px;
+  top: 25px;
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(to right, white, black);
+}
+
+li a:hover::before {
+  width: 100%;
+}
+
+a.knop1 {
+  padding: 0.8rem 1.5rem;
+  border-radius: 3rem;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(to right, white, black);
+  text-decoration: none;
+}
+
+.knop1:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, black, white);
+}
+
+#navbar {
+  font-size: 2rem;
+  display: none;
+}
+
+section {
+  min-height: 100vh;
+  padding: 8rem 12%;
+  width: 100%;
+  position: relative;
+}
+
+#menu-icon {
+  font-size: 2rem;
+  color: black;
+  display: none;
+}
+
+/*scrollbar
+***************************************************************************************************************/
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, white, rgb(55, 51, 51));
+}
+
+/*responsive navbar
+****************************************************************************************/
+
+@media (max-width: 1280px) {
+  header {
+    padding: 1rem 2rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 1rem;
+    gap: 1rem;
+  }
+
+  header .naam {
+    font-size: 1rem;
+  }
+
+  header .knop1 {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  header #menu-icon {
+    display: block;
+  }
+
+  .links-header {
+    position: absolute;
+    top: 100%;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: silver;
+    border-radius: 3rem;
+    display: none;
+    opacity: 0.9;
+    font-size: 1.2rem;
+  }
+
+  .links-header li {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+
+  .links-header.active {
+    display: block;
+  }
+
+  header {
+    padding: 1rem 5rem;
+    gap: 5rem;
+  }
+
+  header .naam {
+    font-size: 1.8rem;
+  }
+}
+
+/*overschijvingen bootstrap
+***************************************************************************************/
+
+.knop-hero:hover {
+  background-color: white;
+  color: black;
+}
