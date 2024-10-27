@@ -6,6 +6,11 @@
     <title>Project 2</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My portfolio page." />
+    <meta
+      name="keywords"
+      content="html, css, text, images, tables, grid, flexbox, bootstrap, git"
+    />
     <title>Project</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -21,6 +26,12 @@
     ></script>
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Racing+Sans+One&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="stylesheet"
@@ -28,7 +39,7 @@
     />
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
   </head>
-  <body>
+  <body class="bg-black">
     <!--navbar***************************************************************************************-->
 
     <header class="header">
@@ -67,18 +78,18 @@
 
     <main id="index.html">
       <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 m-0">
+          <div class="col-12 col-sm-12 col-lg-6">
             <img
               src="img/foto_homepage.jpg"
-              class="d-block mx-lg-auto img-fluid foto-homepage rounded-circle"
+              class="d-block mx-lg-auto img-fluid foto-homepage rounded-circle align-content-center"
               alt="een foto van mezelf"
               width="400"
               height="300"
               loading="lazy"
             />
           </div>
-          <div class="col-lg-6 text-light mt-5 pt-5">
+          <div class="col text-light mt-5 pt-5">
             <h3>Hallo, ik ben</h3>
             <h1>Nick&nbsp;Tuymans</h1>
             <p class="mt-4">
@@ -109,9 +120,10 @@
     </main>
 
     <section id="cv">
+      <h2 class="text-center text-white mb-5">curriculum vitae</h2>
       <div class="container text-center">
         <div class="row">
-          <div class="col">
+          <div class="col-md mb-3">
             <div class="card h-100">
               <div class="card-body">
                 <i class="fa-solid fa-school"></i>
@@ -133,7 +145,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-md mb-3">
             <div class="card h-100">
               <div class="card-body">
                 <i class="fa-solid fa-briefcase"></i>
@@ -157,12 +169,12 @@
         </div>
       </div>
       <div class="container text-center">
-        <div class="row mb-5 mt-5">
-          <div class="col">
+        <div class="row">
+          <div class="col-md mb-3">
             <div class="card h-100">
               <div class="card-body">
-                <i class="fa-solid fa-web-awesome"></i>
-                <h2 class="card-subtitle mb-2 text-body-secondary">
+                <i class="fa-solid fa-web-awesome mt-3"></i>
+                <h2 class="card-subtitle mb-4 text-body-secondary">
                   Competenties
                 </h2>
                 <p class="card-text gap mb-3">Klantgericht</p>
@@ -180,60 +192,47 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-md mb-3">
             <div class="card h-100">
-              <div class="card-body">
+              <div class="card-body m-0 p-0">
                 <table class="table">
-                  <caption class="caption-top text-center mt-0 pt-0">
+                  <caption class="caption-top text-center mt-3 pt-0">
                     <i class="fa-solid fa-file"></i>
-                    <h2 class="card-subtitle mb-2 text-body-secondary">
+                    <h2 class="card-subtitle mb-2 text-body-secondary mt">
                       Skills
                     </h2>
                   </caption>
 
                   <tr class="text-center">
-                    <td class="text-start">
-                      <p class="card-text">Nederlands&nbsp;</p>
+                    <td class="text-start" style="border-bottom: none">
+                      <p class="card-text m-2">Nederlands&nbsp;</p>
                     </td>
-                    <td class="text-start">
+                    <td class="text-start pt-2 p-0" style="border-bottom: none">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
-                    </td>
-                  </tr>
-
-                  <tr class="text-center">
-                    <td class="text-start">
-                      <p class="card-text">Engels&nbsp;</p>
-                    </td>
-                    <td class="text-start">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </td>
-                  </tr>
-                  <tr class="text-center">
-                    <td class="text-start">
-                      <p class="card-text">Word&nbsp;</p>
-                    </td>
-                    <td class="text-start">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
                     </td>
                   </tr>
 
                   <tr class="text-center">
-                    <td class="text-start">
-                      <p class="card-text">Exel&nbsp;</p>
+                    <td class="text-start" style="border-bottom: none">
+                      <p class="card-text m-2">Engels&nbsp;</p>
                     </td>
-                    <td class="text-start">
+                    <td class="text-start pt-2 p-0" style="border-bottom: none">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td class="text-start" style="border-bottom: none">
+                      <p class="card-text m-2">Word&nbsp;</p>
+                    </td>
+                    <td class="text-start pt-2 p-0" style="border-bottom: none">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
@@ -243,10 +242,23 @@
                   </tr>
 
                   <tr class="text-center">
-                    <td class="text-start">
-                      <p class="card-text">Powerpoint&nbsp;</p>
+                    <td class="text-start" style="border-bottom: none">
+                      <p class="card-text m-2">Exel&nbsp;</p>
                     </td>
-                    <td class="text-start">
+                    <td class="text-start pt-2 p-0" style="border-bottom: none">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                      <i class="fa-regular fa-star"></i>
+                    </td>
+                  </tr>
+
+                  <tr class="text-center">
+                    <td class="text-start" style="border-bottom: none">
+                      <p class="card-text m-2">Powerpoint&nbsp;</p>
+                    </td>
+                    <td class="text-start pt-2 p-0" style="border-bottom: none">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-regular fa-star"></i>
                       <i class="fa-regular fa-star"></i>
@@ -255,10 +267,10 @@
                     </td>
                   </tr>
                   <tr class="text-center">
-                    <td class="text-start">
-                      <p class="card-text">Blender-C4D&nbsp;</p>
+                    <td class="text-start" style="border-bottom: none">
+                      <p class="card-text m-2">Blender-C4D&nbsp;</p>
                     </td>
-                    <td class="text-start">
+                    <td class="text-start pt-2 p-0" style="border-bottom: none">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-regular fa-star"></i>
                       <i class="fa-regular fa-star"></i>
@@ -268,10 +280,10 @@
                   </tr>
 
                   <tr class="text-center">
-                    <td class="text-start">
-                      <p class="card-text">C#&nbsp;</p>
+                    <td class="text-start" style="border-bottom: none">
+                      <p class="card-text m-2">C#&nbsp;</p>
                     </td>
-                    <td class="text-start">
+                    <td class="text-start pt-2 p-0" style="border-bottom: none">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-regular fa-star"></i>
@@ -280,10 +292,13 @@
                     </td>
                   </tr>
                   <tr class="text-center">
-                    <td class="text-start">
-                      <p class="card-text">HTML5&nbsp;</p>
+                    <td class="text-start" style="border-bottom: none">
+                      <p class="card-text m-2">HTML5&nbsp;</p>
                     </td>
-                    <td class="text-start">
+                    <td
+                      class="text-start pt-2 p-0 m-0"
+                      style="border-bottom: none"
+                    >
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-regular fa-star"></i>
@@ -298,6 +313,187 @@
         </div>
       </div>
     </section>
+
+    <section class="container-fluid text-center" id="projecten">
+      <h2 class="text-center text-white mb-5">Mijn projecten</h2>
+
+      <div class="row align-content-center">
+        <div class="col-6 m-3">
+          <div class="card h-100">
+            <img
+              src="img/project1.png"
+              class="card-img-top"
+              alt="dit is een foto van mijn eerste website"
+              width="100%"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Mijn website</h5>
+              <p class="card-text m-3">Deze website was mijn eerste project.</p>
+              <p class="card-text">
+                Dit was een goede oefening om verschillende methoden van stylen
+                uit te proberen.<br />En het heeft me leren werken met bootstrap
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col m-3">
+          <div class="card h-100">
+            <img
+              src="img/jpegCode.jpeg"
+              class="card-img-top"
+              alt="Dit is een foto van code."
+              height="52%"
+            />
+            <div class="card-body">
+              <h5 class="card-title">C# turn based combat game</h5>
+              <p class="card-text">
+                Dit is een simpele turn based combat game gemaakt in C#.
+              </p>
+              <p>
+                Dit project heeft me geleerd verder na te denken over C#
+                code.<br />En zo heb ik mezelf wat beter leren methodes
+                aanmaken.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <img
+        src="img/foto_projectpagina.jpg"
+        alt="Dit is een foto van C# code."
+        class="align-content-center mt-5"
+        width="100%"
+      /> -->
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-center text-white mb-5">Contact</h2>
+
+        <div class="row">
+          <div class="col-lg-7 mx-auto">
+            <div class="card mt-2 mx-auto p-4 bg-light">
+              <div class="card-body bg-light">
+                <div class="container">
+                  <form id="contact-form" role="form">
+                    <div class="controls">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="name">Voornaam*</label>
+                            <input
+                              id="name"
+                              type="text"
+                              name="name"
+                              class="form-control"
+                              placeholder="Voornaam"
+                              required="required"
+                              data-error="Verplicht"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="achternaam">achternaam*</label>
+                            <input
+                              id="achternaam"
+                              type="text"
+                              name="achternaam"
+                              class="form-control"
+                              placeholder="Achternaam"
+                              required="required"
+                              data-error="Verplicht."
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="email">E-mail*</label>
+                            <input
+                              id="email"
+                              type="email"
+                              name="email"
+                              class="form-control"
+                              placeholder="E-mail*"
+                              required="required"
+                              data-error="Verplicht."
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="onderwerp">Onderwerp*</label>
+                            <input
+                              id="onderwerp"
+                              type="text"
+                              name="onderwerp"
+                              class="form-control"
+                              placeholder="Onderwerp"
+                              required="required"
+                              data-error="Verplicht."
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 m-2">
+                          <div class="form-group">
+                            <label for="bericht">Bericht*</label>
+                            <textarea
+                              id="bericht"
+                              name="bericht"
+                              class="form-control"
+                              placeholder="Schrijf hier je bericht."
+                              rows="4"
+                              required="required"
+                              data-error="Geef een bericht mee."
+                            ></textarea>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12">
+                          <input
+                            type="submit"
+                            class="btn btn-dark btn-send pt-2 btn-block mt-5"
+                            value="Send Message"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- /.8 -->
+          </div>
+          <!-- /.row-->
+        </div>
+      </div>
+    </section>
+    <footer class="text-center">
+      <ul class="list-unstyled">
+        <li class="m-2">
+          <a href="#about">Over&nbsp;mij</a>
+        </li>
+
+        <li class="m-2">
+          <a href="#cv">CV</a>
+        </li>
+
+        <li class="m-2">
+          <a href="#projecten">Projecten</a>
+        </li>
+
+        <li class="m-2">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <p class="mb-0">&copy; Copyright Tuymans Nick - 2024</p>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
