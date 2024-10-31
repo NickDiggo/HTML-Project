@@ -237,19 +237,3 @@ footer {
 .projecten {
   width: 70%;
 }
-
-.kaart {
-  background-color: black;
-  color: white;
-  border-color: white;
-  border-radius: 0.5rem;
-}
-
-.kaart:hover {
-  background-color: white;
-  color: black;
-}
-
-body {
-  background-image: url(../img/black-space-stars.gif);
-}
