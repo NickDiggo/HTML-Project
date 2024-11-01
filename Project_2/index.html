@@ -38,8 +38,6 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
   </head>
   <body class="bg-black">
-    <!--navbar***************************************************************************************-->
-
     <header class="header">
       <a href="#" class="naam"><span>Nick Tuymans</span></a>
 
@@ -89,7 +87,9 @@
           </div>
           <div class="col text-light mt-5 pt-5">
             <h3>Hallo, ik ben</h3>
-            <h1>Nick&nbsp;Tuymans</h1>
+
+            <h1 class="hero-text"><strong>Nick&nbsp;Tuymans</strong></h1>
+
             <p class="mt-4">
               Na tien jaar ervaring als monteur bij een busbedrijf heb ik de
               kans gekregen om mijn passie te volgen en creatief aan de slag te
@@ -115,10 +115,61 @@
           </div>
         </div>
       </div>
+      <div class="container align-items-center">
+        <div class="text-white">
+          <h3 class="text-center mb-5"><strong>Interesses</strong></h3>
+
+          <p class="text-white mb-2 mt-4">
+            Ik hou van verschillende tv-shows die me aan het nadenken zetten.
+            Darts is er een van. ik vind het geweldig om de spanning van de
+            wedstrijden te zien en hoe vaardig de spelers zijn. Het is een sport
+            waarbij je moet nadenken en altijd vooruit moet denken. Ook speel ik
+            het zelf regelmatig als ontspanning en omdat het een goede manier is
+            om je verstand sherp te houden.
+          </p>
+          <p class="text-white">
+            Verder kijk ik ook graag naar andere TV series die me laten
+            nadenken, House M.D. is ook een favoriet van me. Ik vind het
+            fascinerend hoe het team medische mysteries oplost en hoe ieders
+            karakter zich ontwikkelt. <br />Lucifer is weer heel anders, maar
+            het heeft een leuke mix van drama en humor, en ik geniet van de
+            unieke kijk op goed en kwaad. <br />En dan is er nog Suits. Die
+            serie heeft slimme dialogen en spannende juridische strijd, wat me
+            altijd geboeid houdt.
+          </p>
+
+          <div class="carrousel mx-auto">
+            <div class="slides">
+              <img
+                src="img/darts.jpg"
+                alt="foto van 'world championship darts'"
+                class="foto-serie"
+              />
+              <img
+                src="img/house.jpg"
+                alt="foto van de serie 'House M.D.'"
+                class="foto-serie"
+              />
+              <img
+                src="img/lucifer.jpg"
+                alt="foto van de serie'Lucifer'"
+                class="foto-serie"
+              />
+              <img
+                src="img/suits.jpg"
+                alt="foto van de serie 'Suits'"
+                class="foto-serie"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <section id="cv">
-      <h2 class="text-center text-white mb-5">curriculum vitae</h2>
+      <h2 class="text-center text-white mb-5">
+        <strong>Curriculum Vitae</strong>
+      </h2>
       <div class="container text-center">
         <div class="row">
           <div class="col-md mb-3">
@@ -313,7 +364,9 @@
     </section>
 
     <section class="container text-center projecten" id="projecten">
-      <h2 class="text-center text-white mb-5">Mijn projecten</h2>
+      <h2 class="text-center text-white mb-5">
+        <strong>Mijn projecten</strong>
+      </h2>
 
       <div class="row align-content-center">
         <div class="col-md-6 p-0 mt-2">
@@ -363,7 +416,7 @@
 
     <section id="contact">
       <div class="container">
-        <h2 class="text-center text-white">Contact</h2>
+        <h2 class="text-center text-white"><strong>Contact</strong></h2>
         <div class="d-flex align-items-center mt-0 pt-0">
           <img src="img/e-mail.png" alt="foto van een email" class="mx-auto" />
         </div>
@@ -373,7 +426,10 @@
             <div class="card mt-2 mx-auto p-4 bg-light">
               <div class="card-body bg-light">
                 <div class="container">
-                  <form id="contact-form" role="form">
+                  <form
+                    method="post"
+                    action="https://tm-statweb.be/sendmail.php"
+                  >
                     <div class="controls">
                       <div class="row">
                         <div class="col-md-6">
@@ -386,7 +442,6 @@
                               class="form-control"
                               placeholder="Voornaam"
                               required="required"
-                              data-error="Verplicht"
                             />
                           </div>
                         </div>
@@ -400,7 +455,6 @@
                               class="form-control"
                               placeholder="Achternaam"
                               required="required"
-                              data-error="Verplicht."
                             />
                           </div>
                         </div>
@@ -416,7 +470,6 @@
                               class="form-control"
                               placeholder="E-mail"
                               required="required"
-                              data-error="Verplicht."
                             />
                           </div>
                         </div>
@@ -430,7 +483,6 @@
                               class="form-control"
                               placeholder="Onderwerp"
                               required="required"
-                              data-error="Verplicht."
                             />
                           </div>
                         </div>
@@ -446,16 +498,20 @@
                               placeholder="Schrijf hier je bericht."
                               rows="4"
                               required="required"
-                              data-error="Geef een bericht mee."
                             ></textarea>
                           </div>
                         </div>
-
+                        <input
+                          type="hidden"
+                          name="studentemail"
+                          value="
+                          r0333915@student.thomasmore.be"
+                        />
                         <div class="col-md-12">
                           <input
                             type="submit"
                             class="btn btn-dark btn-send pt-2 btn-block mt-5"
-                            value="Send Message"
+                            value="Verstuur"
                           />
                         </div>
                       </div>

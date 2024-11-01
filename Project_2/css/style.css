@@ -4,9 +4,6 @@
   font-style: normal;
 }
 
-/*navbar
-  **********************************************************************************************/
-
 header {
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
@@ -104,9 +101,6 @@ section {
   display: none;
 }
 
-/*scrollbar
-***************************************************************************************************************/
-
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -118,9 +112,6 @@ section {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, white, rgb(55, 51, 51));
 }
-
-/*responsive navbar
-****************************************************************************************/
 
 @media (max-width: 1280px) {
   header {
@@ -184,9 +175,6 @@ section {
     font-size: 1.8rem;
   }
 }
-
-/*overschijvingen bootstrap
-***************************************************************************************/
 
 .knop-hero:hover {
   background-color: white;
@@ -252,4 +240,165 @@ footer {
 
 body {
   background-image: url(../img/black-space-stars.gif);
+}
+
+.hero-text {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.15em #1da9cc;
+  user-select: none;
+  white-space: nowrap;
+  filter: blur(0.007em);
+  animation: shake 2.5s linear forwards;
+}
+
+.hero-text span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+  clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+}
+
+.hero-text::before,
+.hero-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-text::before {
+  animation: crack1 2.5s linear forwards;
+  -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+}
+
+.hero-text::after {
+  animation: crack2 2.5s linear forwards;
+  -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+  clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+}
+
+@keyframes shake {
+  5%,
+  15%,
+  25%,
+  35%,
+  55%,
+  65%,
+  75%,
+  95% {
+    filter: blur(0.018em);
+    transform: translateY(0.018em) rotate(0deg);
+  }
+
+  10%,
+  30%,
+  40%,
+  50%,
+  70%,
+  80%,
+  90% {
+    filter: blur(0.01em);
+    transform: translateY(-0.018em) rotate(0deg);
+  }
+
+  20%,
+  60% {
+    filter: blur(0.03em);
+    transform: translate(-0.018em, 0.018em) rotate(0deg);
+  }
+
+  45%,
+  85% {
+    filter: blur(0.03em);
+    transform: translate(0.018em, -0.018em) rotate(0deg);
+  }
+
+  100% {
+    filter: blur(0.007em);
+    transform: translate(0) rotate(-0.5deg);
+  }
+}
+
+.carrousel,
+.carrousel * {
+  box-sizing: border-box;
+}
+.carrousel {
+  font-size: 1rem;
+
+  width: 40%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-rows: max-content 1fr max-content;
+  grid-template-areas:
+    ". . f"
+    "l . r"
+    "p b c";
+  border-radius: 0.25rem;
+}
+
+.foto-serie {
+  width: 40%vh;
+}
+
+.carrousel.hide-controls .control {
+  opacity: 0;
+  pointer-events: 0;
+}
+.carrousel .slides {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: flex;
+  flex-grow: grow;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.carrousel > *:not(.slides) {
+  margin: 0.5em;
+}
+.carrousel .slides img {
+  --backgroundOverlay: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  background: #1d1e22;
+  object-fit: var(--object-fit, cover);
+  transition: margin-left 1s ease;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carrousel .icon {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.carrousel .arrow-left {
+  grid-area: l;
+  font-size: 1.5em;
+}
+.carrousel .arrow-right {
+  grid-area: r;
+  font-size: 1.5em;
+}
+.carrousel .full-view-btn {
+  grid-area: f;
+}
+.carrousel .auto-play-btn {
+  grid-area: p;
+}
+.carrousel .controls-hide-btn {
+  grid-area: c;
+}
+.carrousel .bullets {
+  grid-area: b;
+  display: flex;
+  gap: 0.5rem;
 }
